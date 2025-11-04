@@ -1,16 +1,74 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Richard Macharia(Updated Portfolio)
 
-Currently, two official plugins are available:
+This repository is a small React + Vite starter used to build an ebook/portfolio style front-end. It includes a minimal Vite setup, React, routing, and a few UI utilities and components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+What I changed for you:
 
-## React Compiler
+- Added an adaptive SVG favicon (`/public/favicon.svg`) with a small "r" in a slate color and transparent background. It adapts to light/dark color scheme.
+- Improved `index.html` metadata (title, description, theme-color) for better mobile UX.
+- Updated `package.json` name to `ebook-creator` and refreshed the README with usage instructions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Getting started
+---------------
 
-## Expanding the ESLint configuration
+Requirements
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js (v16+ recommended)
+- npm or pnpm
+
+Install
+
+```bash
+npm install
+# or
+pnpm install
+```
+
+Development
+
+```bash
+npm run dev
+# opens Vite dev server with HMR
+```
+
+Build
+
+```bash
+npm run build
+```
+
+Preview production build
+
+```bash
+npm run preview
+```
+
+Scripts
+
+- `dev` — start Vite dev server
+- `build` — build production assets
+- `preview` — locally preview the production build
+- `lint` — run ESLint across the project
+
+Project structure (key files)
+
+- `index.html` — app entry HTML; includes favicon and meta tags
+- `src/main.jsx` — React entry point
+- `src/App.jsx` — root app component
+- `src/pages/` — route pages (Home, NotFound)
+- `src/assets/components` — small UI components (ThemeToggle)
+- `public/` — static assets served as-is (the favicon lives here)
+
+Notes & suggestions
+-------------------
+
+- The favicon is an SVG in `public/favicon.svg`. Modern browsers support SVG favicons and the file includes a small CSS @media rule to adjust the letter color for dark mode.
+- I kept changes minimal and low-risk. If you'd like, I can add a PNG fallback for older browsers, wire a `manifest.json`, or add CI checks (lint/test) next.
+
+License
+
+This repo currently doesn't include an explicit license file. Add `LICENSE` if you plan to publish or open-source this project.
+
+Enjoy building!
+
